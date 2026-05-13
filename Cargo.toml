@@ -1,5 +1,5 @@
 [workspace]
-members = ["contracts/*"]
+members = ["contracts/*", "packages/*"]
 resolver = "2"
 
 [workspace.package]
@@ -23,6 +23,19 @@ tag = "v0.6.0"
 [workspace.dependencies.stellar-tokens]
 git = "https://github.com/OpenZeppelin/stellar-contracts"
 tag = "v0.6.0"
+
+[workspace.dependencies]
+stellar-xdr = { version = "22.0.0", default-features = false }
+tokio = { version = "1.0", features = ["full"] }
+sqlx = { version = "0.7", features = ["runtime-tokio", "postgres", "macros", "chrono"] }
+serde = { version = "1.0", features = ["derive"] }
+chrono = { version = "0.4", features = ["serde"] }
+clap = { version = "4.0", features = ["derive"] }
+dotenvy = "0.15"
+tracing = "0.1"
+tracing-subscriber = "0.3"
+anyhow = "1.0"
+thiserror = "1.0"
 
 [profile.release]
 opt-level = "z"

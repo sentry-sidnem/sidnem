@@ -119,3 +119,19 @@ This template provides a ready-to-use frontend application with example smart
 contracts and their TypeScript clients. You can use these as reference while
 building your own contracts and UI. The frontend is set up with Vite, React, and
 includes basic components for interacting with the contracts.
+
+---
+
+# 🛡️ Soroban Sentry (Infrastructure)
+
+**The Programmable Compliance & Observability layer for Stellar.**
+
+This workspace now includes the **Soroban Sentry** infrastructure suite, designed for the [Stellar Wave Program](https://www.drips.network/wave/stellar).
+
+### 🏗️ Sentry Layout
+- **`contracts/sentry-contract`**: On-chain gatekeeper for compliance guards.
+- **`packages/sentry-indexer`**: High-performance Rust indexer for audit trails.
+- **`packages/sentry-common`**: Shared Rust types for contract-backend parity.
+- **`packages/sentry-cli`**: Developer tool for compliance monitoring.
+
+For more details, see [SENTRY.md](./SENTRY.md), [ARCHITECTURE.md](./ARCHITECTURE.md), and [WAVE_STRATEGY.md](./WAVE_STRATEGY.md).

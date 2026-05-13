@@ -1,0 +1,16 @@
+[package]
+name = "sentry-contract"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[lib]
+crate-type = ["cdylib", "rlib"]
+
+[dependencies]
+soroban-sdk = { workspace = true }
+sentry-common = { path = "../../packages/sentry-common", features = ["contract"] }
+
+[dev-dependencies]
+soroban-sdk = { workspace = true, features = ["testutils"] }

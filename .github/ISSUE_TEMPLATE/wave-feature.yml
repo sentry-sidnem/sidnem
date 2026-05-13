@@ -1,0 +1,47 @@
+name: "🌊 Stellar Wave: Feature Implementation"
+about: "Use this template to propose or claim a new feature for the current Wave."
+title: "[WAVE] Feature: <short description>"
+labels: ["wave-ready", "enhancement"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ### 🎯 Feature Overview
+        Provide a clear description of what needs to be implemented.
+  - type: dropdown
+    id: domain
+    attributes:
+      label: "Technical Domain"
+      options:
+        - "Rust/Soroban (Contract)"
+        - "Rust/Backend (Indexer)"
+        - "TypeScript (SDK/Dashboard)"
+        - "Documentation"
+    validations:
+      required: true
+  - type: dropdown
+    id: difficulty
+    attributes:
+      label: "Estimated Difficulty"
+      options:
+        - "Easy (100 Points)"
+        - "Intermediate (300 Points)"
+        - "Advanced (500+ Points)"
+    validations:
+      required: true
+  - type: textarea
+    id: technical-details
+    attributes:
+      label: "Technical Details"
+      placeholder: "Specify which crates/files are affected and any implementation constraints."
+    validations:
+      required: true
+  - type: checkboxes
+    id: requirements
+    attributes:
+      label: "Definition of Done"
+      options:
+        - label: "Code implements the logic described."
+        - label: "Unit tests are included."
+        - label: "Documentation updated."
+        - label: "No clippy/lint warnings."

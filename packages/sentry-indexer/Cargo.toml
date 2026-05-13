@@ -1,0 +1,16 @@
+[package]
+name = "sentry-indexer"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+tokio = { workspace = true }
+sqlx = { workspace = true }
+dotenvy = { workspace = true }
+tracing = { workspace = true }
+tracing-subscriber = { workspace = true }
+anyhow = { workspace = true }
+sentry-common = { path = "../sentry-common", features = ["indexer"] }
+stellar-xdr = { workspace = true }

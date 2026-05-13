@@ -1,0 +1,26 @@
+name: "🐛 Stellar Wave: Bug Fix"
+about: "Use this template to report or claim a bug fix for the current Wave."
+title: "[WAVE] Bug: <short description>"
+labels: ["wave-ready", "bug"]
+body:
+  - type: textarea
+    id: bug-description
+    attributes:
+      label: "Description"
+      placeholder: "Describe the bug and how it affects the system."
+    validations:
+      required: true
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Steps to Reproduce"
+      placeholder: "1. Run command X...\n2. Observe error Y..."
+  - type: dropdown
+    id: severity
+    attributes:
+      label: "Severity"
+      options:
+        - "Critical"
+        - "High"
+        - "Medium"
+        - "Low"

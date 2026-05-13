@@ -1,0 +1,17 @@
+[package]
+name = "sentry-common"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+soroban-sdk = { workspace = true, optional = true }
+stellar-xdr = { workspace = true, optional = true }
+serde = { workspace = true }
+chrono = { workspace = true }
+
+[features]
+default = []
+contract = ["soroban-sdk"]
+indexer = ["stellar-xdr"]

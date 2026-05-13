@@ -37,8 +37,10 @@ lerna-debug.log*
 
 # generated contract clients
 packages/*
-# if you have other workspace packages, add them here
 !packages/.gitkeep
+!packages/sentry-common/
+!packages/sentry-indexer/
+!packages/sentry-cli/
 
 # generated contract client imports
 src/contracts/*

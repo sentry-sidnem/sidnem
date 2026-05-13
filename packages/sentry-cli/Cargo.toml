@@ -1,0 +1,11 @@
+[package]
+name = "sentry-cli"
+version.workspace = true
+edition.workspace = true
+authors.workspace = true
+license.workspace = true
+
+[dependencies]
+clap = { workspace = true }
+anyhow = { workspace = true }
+sentry-common = { path = "../sentry-common" }
