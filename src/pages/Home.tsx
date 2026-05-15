@@ -1,50 +1,28 @@
 import { Button, Card, Icon } from "@stellar/design-system"
 import React from "react"
 import { Link } from "react-router-dom"
-import { GuessTheNumber } from "../components/GuessTheNumber"
 import { labPrefix } from "../contracts/util"
 import styles from "./Home.module.css"
 
 const Home: React.FC = () => (
 	<div className={styles.Home}>
 		<div>
-			<h1>Yay! You&apos;re on Stellar!</h1>
+			<h1>Soroban Sentry Hub</h1>
 
 			<p>
-				A local development template designed to help you build dApps on the
-				Stellar network. This environment lets you easily test wallet
-				connections, smart contract interactions, transaction verifications,
-				etc.{" "}
-				<Link
-					to="https://scaffoldstellar.org/docs/intro"
-					className="Link Link--primary"
-					target="_blank"
-				>
-					View docs
-				</Link>
+				Institutional-grade compliance and security infrastructure for the Stellar network.
 			</p>
 		</div>
 
 		<Card>
 			<h2>
-				<Icon.File06 size="lg" />
-				Sample Contracts
+				<Icon.Code02 size="lg" />
+				Sentry Integration
 			</h2>
 
 			<p>
-				<strong>Guess The Number:</strong> Interact with the sample contract
-				from the{" "}
-				<Link
-					to="https://scaffoldstellar.org/docs/tutorial/overview"
-					className="Link Link--primary"
-					target="_blank"
-				>
-					Scaffold Tutorial
-				</Link>{" "}
-				using an automatically generated contract client.
+				Use the <strong>Sentry Common SDK</strong> to integrate programmable compliance guards into your smart contracts.
 			</p>
-
-			<GuessTheNumber />
 
 			<p>Or take a look at other sample contracts to get you started:</p>
 
