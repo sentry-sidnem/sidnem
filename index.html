@@ -1,19 +1,211 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="icon" type="image/x-icon" href="/favicon.ico" />
-		<title>Scaffold Stellar Starter App</title>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Inconsolata:wght@500&display=swap"
-			rel="stylesheet"
-		/>
-	</head>
-	<body>
-		<div id="root"></div>
-		<script type="module" src="/src/main.tsx"></script>
-	</body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soroban Sentry | Institutional Compliance Layer for Stellar</title>
+    <meta name="description" content="Soroban Sentry is the programmable compliance and security infrastructure designed to bring institutional trust to the Stellar Network.">
+    <link rel="stylesheet" href="/src/index.css">
+</head>
+<body>
+    <nav class="sticky-nav">
+        <div class="container nav-content">
+            <div class="logo">
+                <span class="logo-icon">🛡️</span>
+                <span class="logo-text">Soroban Sentry</span>
+            </div>
+            <div class="nav-links">
+                <a href="#vision">The Problem</a>
+                <a href="#how-it-works">How it Works</a>
+                <a href="#capabilities">Capabilities</a>
+                <a href="#community">Community Value</a>
+                <a href="https://github.com/sentry-sidnem/sidnem" class="btn btn-outline">Documentation</a>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero">
+        <div class="tech-overlay"></div>
+        <div class="container hero-content">
+            <div class="hero-text">
+                <span class="badge">Institutional Infrastructure Layer</span>
+                <h1>Programmable Trust<br>for Real World Assets.</h1>
+                <p class="lead">Soroban Sentry is a unified infrastructure protocol that provides institutional-grade compliance, security monitoring, and immutable audit trails for smart contracts on Stellar.</p>
+                <div class="hero-actions">
+                    <a href="#how-it-works" class="btn btn-primary">How It Works</a>
+                    <a href="#cli-demo" class="btn btn-outline">Explore Lens CLI</a>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="visual-placeholder" id="hero-viz-container">
+                    <img src="/hero_viz_premium.png" alt="Sentry Visualization" id="hero-img">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="vision" class="vision-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>The Institutional Bridge</h2>
+                <p>To achieve mass adoption of tokenized assets, Stellar requires a compliance layer that is as decentralized as the network itself.</p>
+            </div>
+            <div class="problem-grid">
+                <div class="problem-item">
+                    <h3>The Challenge</h3>
+                    <p>Current on-chain compliance is often hard-coded into asset contracts, making it rigid, difficult to audit, and expensive to update as regulations shift.</p>
+                </div>
+                <div class="problem-item">
+                    <h3>The Sentry Solution</h3>
+                    <p>Sentry decouples compliance logic from the asset layer. By using a modular "Guard" architecture, issuers can update regulatory rules in real-time without redeploying their core tokens.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <div class="section-title">
+                <h2>Modular Guard Architecture</h2>
+                <p>A multi-layered defense and compliance system designed for the Soroban VM.</p>
+            </div>
+            <div class="process-steps">
+                <div class="step-card">
+                    <div class="step-icon">1</div>
+                    <h4>The Sentry Hub</h4>
+                    <p>A centralized on-chain registry where assets register their compliance requirements. Every transaction triggers a "Sentry Hook" before finalization.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">2</div>
+                    <h4>Guard Modules</h4>
+                    <p>Isolatable logic containers (WASM) that perform specific checks: KYC status, Geofencing, Velocity limits, or AML pattern matching.</p>
+                </div>
+                <div class="step-card">
+                    <div class="step-icon">3</div>
+                    <h4>Audit Engine</h4>
+                    <p>Shared Rust types (XDR) ensure that every check is mirrored in a persistent off-chain indexer, creating a regulator-friendly immutable trail.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="capabilities" class="capabilities-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>What Sentry Can Do</h2>
+                <p>Comprehensive features tailored for Institutional DeFi and Asset Issuers.</p>
+            </div>
+            <div class="vision-grid">
+                <div class="card">
+                    <div class="card-icon">🌍</div>
+                    <h3>Global Geofencing</h3>
+                    <p>Automatically restrict asset transfers based on the jurisdictional eligibility of the sender and receiver, ensuring compliance with local laws.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📈</div>
+                    <h3>Velocity & Volume Limits</h3>
+                    <p>Prevent flash-crashes and suspicious activity by enforcing daily, weekly, or per-transaction value limits across your entire asset pool.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🆔</div>
+                    <h3>KYC/AML Integration</h3>
+                    <p>Plug into existing identity providers to ensure only verified participants can interact with permissioned liquidity pools.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🚨</div>
+                    <h3>Circuit Breakers</h3>
+                    <p>Sentry monitors for anomaly patterns. If a security breach is detected, it can automatically pause contract execution to protect user funds.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">📜</div>
+                    <h3>Regulatory Reporting</h3>
+                    <p>Generate one-click audit reports via the Sentry Indexer, providing full transparency to regulators without exposing sensitive user data.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">🔗</div>
+                    <h3>XDR Parity</h3>
+                    <p>Built with shared Rust common types, ensuring 100% data integrity between the Soroban contract, the indexer, and the auditor's CLI.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="cli-demo" class="cli-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Lens CLI: The Auditor's Terminal</h2>
+                <p>Empower compliance officers with powerful command-line tools to monitor and manage the protocol.</p>
+            </div>
+            <div class="terminal">
+                <div class="terminal-header">
+                    <div class="terminal-btns">
+                        <span></span><span></span><span></span>
+                    </div>
+                    <div class="terminal-title">sentry-cli — zsh</div>
+                </div>
+                <div class="terminal-body">
+                    <div class="line"><span class="prompt">$</span> sentry audit --address G...XYZ</div>
+                    <div class="line output">Fetching compliance history for G...XYZ...</div>
+                    <div class="line output" data-status="ok">[OK] KYC Verified (Issuer: SEC-Compliance-01)</div>
+                    <div class="line output" data-status="ok">[OK] Daily Volume Limit: 45,000 / 100,000 USD</div>
+                    <div class="line output" data-status="warn">[WARN] Anomaly detected: High-frequency transfers from 3 sub-accounts.</div>
+                    <div class="line"><span class="prompt">$</span> sentry verify --id user_01 --guard kyc_gate</div>
+                    <div class="line output">[SUCCESS] User identity verified. G...XYZ added to Allowlist.</div>
+                    <div class="line"><span class="prompt">$</span> <span class="cursor">_</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="community" class="community-value">
+        <div class="container">
+            <div class="section-title">
+                <h2>Value for the Stellar Community</h2>
+                <p>Sentry isn't just a tool; it's a standard for trust.</p>
+            </div>
+            <div class="value-grid">
+                <div class="value-item">
+                    <h4>Institutional Readiness</h4>
+                    <p>Sentry removes the primary barrier for banks and financial institutions entering Stellar by providing the compliance tools they require.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Standardized Security</h4>
+                    <p>Instead of every protocol building its own security logic, Sentry provides a battle-tested, open-source standard for contract monitoring.</p>
+                </div>
+                <div class="value-item">
+                    <h4>Developer Velocity</h4>
+                    <p>By offloading compliance to Sentry, developers can focus on building innovative DeFi features instead of regulatory boilerplate.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>Soroban Sentry</h3>
+                    <p>The Compliance Layer for the Future of Finance on Stellar.</p>
+                </div>
+                <div class="footer-links">
+                    <h4>Developers</h4>
+                    <a href="#">Documentation</a>
+                    <a href="#">Sentry Common SDK</a>
+                    <a href="#">Guard Templates</a>
+                </div>
+                <div class="footer-links">
+                    <h4>Infrastructure</h4>
+                    <a href="#">Sentry Indexer</a>
+                    <a href="#">Lens CLI</a>
+                    <a href="#">Audit Node Setup</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Soroban Sentry Protocol. Open Source under Apache 2.0.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="module" src="/src/main.js"></script>
+</body>
 </html>
